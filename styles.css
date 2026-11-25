@@ -2,6 +2,17 @@
    HOT HENS — styles
    Palette sampled from the supplied menu, logo and packaging.
    ========================================================= */
+
+/* Self-hosted fonts (SIL Open Font License) — no third-party requests */
+@font-face {
+  font-family: "Anton"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("assets/fonts/Anton-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Sans"; font-style: normal; font-weight: 100 1000; font-display: swap;
+  src: url("assets/fonts/DMSans-variable.woff2") format("woff2");
+}
+
 :root {
   --cream: #FFFAE6;        /* menu background */
   --sand: #E9DFD2;         /* product-photo backdrop */
@@ -379,3 +390,13 @@ a { color: inherit; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Heat thermometer segment colours ---------- */
+.seg-1 { --seg: #862C2E; }
+.seg-2 { --seg: #A63A36; }
+.seg-3 { --seg: #C57246; }
+.seg-4 { --seg: #FCCB26; }
+.seg-5 { --seg: #97C040; }
+
+/* Hidden SVG icon sprite */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }

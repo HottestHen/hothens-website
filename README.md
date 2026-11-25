@@ -12,3 +12,6 @@ Every change pushed to this GitHub repository goes live automatically through Ve
 ## Images
 - Website images: `assets/img/`
 - Original artwork (kept for reference, not published on the site): `assets/source/`
+
+## After editing `styles.css` or `script.js`
+Browsers remember these files for a day. Bump the number in `index.html` (`styles.css?v=3` → `?v=4`, same for `script.js`) so visitors get the new version straight away.

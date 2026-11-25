@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-ZA">
 <head>
   <meta charset="utf-8">
@@ -18,10 +18,9 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="assets/fonts/Anton-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/DMSans-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=3">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -31,9 +30,9 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="Hot Hens home">
-        <img src="assets/img/logo-red.png" alt="Hot Hens — Cluckin' Good" width="285" height="162">
+        <img src="assets/img/logo-red.webp" alt="Hot Hens — Cluckin' Good" width="320" height="182">
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
         <span class="nav-toggle-bars" aria-hidden="true"></span>
         <span class="nav-toggle-label">Menu</span>
       </button>
@@ -54,7 +53,7 @@
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
       <div class="container hero-inner">
-        <div class="hero-copy reveal">
+        <div class="hero-copy">
           <p class="eyebrow">Cluckin' good</p>
           <h1 class="display hero-title">Good chicken. <span>Big clucking energy.</span></h1>
           <p class="lead">Wings, tenders, chips and sauces made to bring the flavour.</p>
@@ -63,8 +62,10 @@
             <a class="btn btn-outline" href="#sauces">Meet the sauces</a>
           </div>
         </div>
-        <figure class="hero-media reveal">
-          <img class="product" src="assets/img/bag-logo-cut.webp" width="723" height="955"
+        <figure class="hero-media">
+          <img class="product" src="assets/img/bag-packaging-cut.webp" width="733" height="1141"
+               srcset="assets/img/bag-packaging-cut-480.webp 480w, assets/img/bag-packaging-cut.webp 733w"
+               sizes="(min-width: 900px) 400px, 78vw"
                alt="A white Hot Hens takeaway bag with the red rooster logo, folded and stapled shut"
                fetchpriority="high">
         </figure>
@@ -136,37 +137,37 @@
 
             <section class="heat reveal" id="heat" aria-labelledby="heat-title">
               <h3 id="heat-title" class="display heat-title">Choose your heat</h3>
-              <p class="heat-scale-label" aria-hidden="true">Hottest</p>
-              <ol class="heat-list" aria-label="Sauces from hottest to mildest">
-                <li style="--seg:#862C2E">
+              <p class="heat-scale-label">Hottest</p>
+              <ol class="heat-list">
+                <li class="seg-1">
                   <span class="heat-seg" aria-hidden="true"></span>
                   <div class="heat-info">
                     <h4>The Mother Clucker <span class="flames" role="img" aria-label="3 flames"><svg><use href="#flame"/></svg><svg><use href="#flame"/></svg><svg><use href="#flame"/></svg></span></h4>
                     <p>On special request&hellip; flock around and find out.</p>
                   </div>
                 </li>
-                <li style="--seg:#A63A36">
+                <li class="seg-2">
                   <span class="heat-seg" aria-hidden="true"></span>
                   <div class="heat-info">
                     <h4>Mango Habanero <span class="flames" role="img" aria-label="1 flame"><svg><use href="#flame"/></svg></span></h4>
                     <p>A tropical explosion of heat and sweet.</p>
                   </div>
                 </li>
-                <li style="--seg:#C57246">
+                <li class="seg-3">
                   <span class="heat-seg" aria-hidden="true"></span>
                   <div class="heat-info">
                     <h4>Wok &amp; Roll <span class="flames" role="img" aria-label="1 flame"><svg><use href="#flame"/></svg></span></h4>
                     <p>Sweet, sticky &amp; spicy with an Asian kick.</p>
                   </div>
                 </li>
-                <li style="--seg:#FCCB26">
+                <li class="seg-4">
                   <span class="heat-seg" aria-hidden="true"></span>
                   <div class="heat-info">
                     <h4>Hot Honey</h4>
                     <p>Pure local honey infused with chilli.</p>
                   </div>
                 </li>
-                <li class="is-bulb" style="--seg:#97C040">
+                <li class="is-bulb seg-5">
                   <span class="heat-seg" aria-hidden="true"></span>
                   <div class="heat-info">
                     <h4>Sweet &amp; Smoke</h4>
@@ -174,7 +175,7 @@
                   </div>
                 </li>
               </ol>
-              <p class="heat-scale-label heat-scale-mild" aria-hidden="true">Mildest</p>
+              <p class="heat-scale-label heat-scale-mild">Mildest</p>
             </section>
 
             <p class="challenge reveal">
@@ -285,7 +286,7 @@
         <p class="eyebrow eyebrow-cream">Find us</p>
         <h2 id="find-title" class="display section-title">Ready to get stuck in?</h2>
         <p class="lead">Your next chicken fix starts here.</p>
-        <p class="coming-soon display" aria-label="Coming soon">Coming soon&hellip;</p>
+        <p class="coming-soon display">Coming soon&hellip;</p>
         <p class="find-note">Location, opening hours and ordering details are on their way.</p>
         <!-- Replace the note above once confirmed:
              address, hours, phone/email, "Order now" + "Get directions" buttons. -->
@@ -296,7 +297,7 @@
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <img class="footer-logo" src="assets/img/logo-cream.png" alt="Hot Hens — Cluckin' Good" width="285" height="162" loading="lazy">
+      <img class="footer-logo" src="assets/img/logo-cream.webp" alt="Hot Hens — Cluckin' Good" width="320" height="182" loading="lazy">
       <nav aria-label="Footer">
         <ul>
           <li><a href="#menu">Menu</a></li>
@@ -311,12 +312,12 @@
   </footer>
 
   <!-- Flame icon -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <svg class="sprite" width="0" height="0" aria-hidden="true">
     <symbol id="flame" viewBox="0 0 24 24">
       <path fill="currentColor" d="M12.6 1.8c.4 3.1-1.3 4.9-2.9 6.6C8 10.2 6.3 12 6.3 15a5.7 5.7 0 0 0 11.4.4c.1-2.3-.9-4-1.9-5.2-.2 1.6-.9 2.6-2 3.1.6-3.6-.2-8.1-1.2-11.5Zm-.3 20.1c-1.9 0-3.3-1.3-3.3-3 0-1.9 1.5-2.8 2.4-4.1.4 1.2 1.4 1.7 2.2 1.3.6 1.3 2 2 2 3.2a3.3 3.3 0 0 1-3.3 2.6Z"/>
     </symbol>
   </svg>
 
-  <script src="script.js" defer></script>
+  <script src="script.js?v=3" defer></script>
 </body>
 </html>
